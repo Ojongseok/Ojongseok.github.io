@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+<title>
+주소 찾기
+</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 </head>
-<body>
-<!-- HELLO DAUM! -->
+<body onload="sample2_execDaumPostcode()">
 
-<!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
-<div id="layer" style="display:block;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
-
+<div id = "layer" style = "display:block; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; position:absolute; overflow:hidden; z-index:1; -webkit-overflow-scrolling:touch;">
 </div>
 
-
-<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<!-- <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script> -->
+<script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
 <script>
+//     function setUpEvent(elem, eventType, handler) {
+//         return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+//             : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+//     }
+    
 
 
 window.addEventListener("message", onReceivedPostMessage, false);
